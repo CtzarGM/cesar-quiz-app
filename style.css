@@ -1,3 +1,7 @@
+:root{
+    --border-color: rgb(100,100,00)
+ }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -11,8 +15,8 @@ body{
     display:flex;
     flex-flow: column;
 /*     justify-content: center; */
-    margin: 1em;
-    border: 1em solid rgb(122, 122, 0);
+/*     margin: 1em; */
+    border: 1em solid var(--border-color);
 }
 
 header{
@@ -20,24 +24,32 @@ header{
 }
 
 main{
-    overflow-x:scroll;
+    height: 100vh;
+    overflow-y:scroll;
     display: flex;
     flex-flow: column;
     /* flex-wrap: wrap; */
     align-items: center;
-    justify-content: space-around;
-    height: 100vh;
+    /* justify-content: space-around; */
+}
+
+footer{
+    display: flex;
+    justify-self: flex-end;
+    height: 10vh;
+    background-color: olive;
+    border-top: 1em solid var(--border-color);
 }
 
 section{
     display: flex;
     flex-flow: column;
     align-items: center;
-    
+    margin: 1em;
     border-radius: 0.3em;
-    height:30vh;
+    min-height:30vh;
     width: 80vw;
-    border: 0.1em solid rgb(122, 122, 0);
+    border: 0.1em solid var(--border-color);
 }
 
 /* CLASS SELECTORS */
@@ -47,7 +59,7 @@ section{
     text-align:center;
 
     padding: 0.5em;
-    border-bottom: 0.5em solid rgb(122, 122, 0);
+    border-bottom: 0.5em solid var(--border-color);
     color: white;
     background-color: olive;
 }
