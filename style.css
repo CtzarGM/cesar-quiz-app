@@ -41,20 +41,31 @@ main{
 footer{
     display: flex;
     justify-self: flex-end;
+    justify-content: space-around;
+    align-items: center;
     height: 20vh;
     background-color: olive;
     border-top: var(--borders);
 }
 
-section{
+section {
     display: flex;
     flex-flow: column;
     align-items: center;
+    justify-content: space-around;
     margin: 1em;
     border-radius: 0.3em;
-    min-height:30vh;
+    min-height:40vh;
     width: 80vw;
     border: var(--borders);
+}
+
+h5{
+    background-color: gray;
+    border-radius: 10%;
+    padding: 1%;
+    min-width: 16vw;
+    margin: 2%;
 }
 
 /* CLASS SELECTORS */
@@ -64,24 +75,48 @@ section{
     text-align:center;
 }
 
+.card-section{
+    display: flex;
+    min-height: 5vh;
+    justify-content: space-between;
+
+}
+.--tags{
+    display:flex;
+    align-self:flex-start;
+    align-content: center;
+/*     min-height: 5vh;
+    min-width: 50vw; */
+}
+
 /* ANSWER BUTTON BUTTON WORK-AROUND */
 input[type="checkbox"]{
     display: none;
 }
-
 #answer{
     display: none;
 }
-
 input[type="checkbox"] + label:after{
     content: "Show Answer";
 }
-
 input[type="checkbox"]:checked + label:after{
     content: "Hide Answer";
 }
-
 input[type="checkbox"]:checked + label + #answer{
     display:block;
 }
 /* END OF WORK-AROUND */
+
+label:after{
+    padding:1em;
+    background-color: darkorange;
+    border-radius: 1em;
+}
+
+img{
+    min-width: 6em;
+    min-height: 6em;
+    border-radius: 20%;
+    padding: 0.4%;
+    height: 50%;
+}
