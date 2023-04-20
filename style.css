@@ -1,5 +1,5 @@
 :root{
-    --border-color: rgb(100,100,00)
+    --borders: 1vh solid rgb(100,100,00)
  }
 
 * {
@@ -12,19 +12,24 @@
 /* TYPE SELECTORS */
 
 body{
+    height:100vh;
     display:flex;
     flex-flow: column;
 /*     justify-content: center; */
 /*     margin: 1em; */
-    border: 1em solid var(--border-color);
+    border:var(--borders);
 }
 
 header{
-    flex-grow: 1;
+    padding: 0.5em;
+    border-bottom:var(--borders);
+    color: white;
+    background-color: olive;
+    height: 20vh;
 }
 
 main{
-    height: 100vh;
+    height: 80vh;
     overflow-y:scroll;
     display: flex;
     flex-flow: column;
@@ -36,9 +41,9 @@ main{
 footer{
     display: flex;
     justify-self: flex-end;
-    height: 10vh;
+    height: 20vh;
     background-color: olive;
-    border-top: 1em solid var(--border-color);
+    border-top: var(--borders);
 }
 
 section{
@@ -49,7 +54,7 @@ section{
     border-radius: 0.3em;
     min-height:30vh;
     width: 80vw;
-    border: 0.1em solid var(--border-color);
+    border: var(--borders);
 }
 
 /* CLASS SELECTORS */
@@ -57,9 +62,26 @@ section{
 .title{
     font-size:2em;
     text-align:center;
-
-    padding: 0.5em;
-    border-bottom: 0.5em solid var(--border-color);
-    color: white;
-    background-color: olive;
 }
+
+/* ANSWER BUTTON BUTTON WORK-AROUND */
+input[type="checkbox"]{
+    display: none;
+}
+
+#answer{
+    display: none;
+}
+
+input[type="checkbox"] + label:after{
+    content: "Show Answer";
+}
+
+input[type="checkbox"]:checked + label:after{
+    content: "Hide Answer";
+}
+
+input[type="checkbox"]:checked + label + #answer{
+    display:block;
+}
+/* END OF WORK-AROUND */
