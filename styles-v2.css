@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+
+
+header{
+    background-color: blue;
+}
+
+main{
+    background-color: blueviolet;
+}
+
+footer{
+    background-color: red;
+}
