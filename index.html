@@ -7,42 +7,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="title">
-        <h1 >Quiz App</h1>
+<body class="body">
+    <header class="body__title">
+        <h1>Quiz App</h1>
     </header>
-    <main>
-        <section class="card">
-            <h3>This is a text with a question</h3>
-            <div class="card-section">
-                <input type="checkbox" id="switch">
-                <label for="switch"></label>
-                <h4 id="answer">This is a text with an answer</h4>
+    <main class="body_main">
+        <article class="card">
+            <div class="card__tab card__tab--active"></div>
+            <div class="card__question">
+                <h3>This is a text with a question</h3>
             </div>
-            <nav class="card-section --tags">
+            <div class="card__answer">
+                <button type="button">Show Answer</button>
+                <h4>This is a text with an answer</h4>
+            </div>
+            <div class="card__tags">
                 <h5>#html</h5>
                 <h5>#flexbox</h5>
                 <h5>#css</h5>
-            </nav>
-        </section>
-        <section class="card">
-            <h3>This is a text with a question</h3>
-            <div class="card-section">
-                <input type="checkbox" id="switch">
-                <label for="switch"></label>
-                <h4 id="answer">This is a text with an answer</h4>
             </div>
-            <nav class="card-section --tags">
-                <h5>#html</h5>
-                <h5>#flexbox</h5>
-                <h5>#css</h5>
-            </nav>
-        </section>
+        </article>
     </main>
-    <footer>
-        <img src="https://th.bing.com/th/id/OIP.FYGKjqo_tTKlHaBViBFGdwHaF4?pid=ImgDet&rs=1" alt="home">
-        <img src="vector-elements\bookmark.png" alt="bookmark">
-        <a href="profile.html"><img src="vector-elements\profile.png" alt="profile"></a>
+    <footer class="body__footer">
+        <a class="icon icon--active" href="index.html">
+            <img alt="home" src="vector-elements/home-icon-orange.png">
+        </a>
+        <a class="icon" href="bookmarks.html">
+            <img alt="bookmarks" src="vector-elements/bookmark-icon-white.png">
+        </a>
+        <a class="icon" href="profile.html">
+            <img alt="profile" src="vector-elements/profile-icon-white.png">
+        </a>
     </footer>
 </body>
 </html>

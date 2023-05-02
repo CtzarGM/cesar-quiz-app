@@ -1,0 +1,26 @@
+.card{
+  display: flex;
+  flex-direction: column;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  padding: 1vh;
+  border: 2px solid var(--identity-color);
+  border-radius: 0.8vh;
+  background-color: white;
+  position: relative;
+}
+
+.card__tab{
+    position: relative;
+    padding: 1px;
+    right: -60vw;
+    top: -2vh;
+    width: 41px;
+    height: 41px;
+    border: solid black 1px;
+    background-image:url("vector-elements/bookmark-card-white.png");
+}
+
+.card__tab--active{
+    background-image: url("vector-elements/bookmark-card-orange.png");
+}
